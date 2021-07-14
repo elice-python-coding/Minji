@@ -14,6 +14,3 @@ for j in range(leftover):
     total += int(arr[-2]) # 그 다음으로 큰 원소를 더해준다.
 
 print(total)
-    
-        
-    
