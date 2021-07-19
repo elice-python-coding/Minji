@@ -13,14 +13,12 @@ def solution(s):
             if prev == cur:  # 이전 문자와 동일하면
                 count += 1
             else:  
-                compressed += (str(count) + prev)
-                if count > 1 else prev
+                compressed += (str(count) + prev) if count > 1 else prev
                 count = 1  # 초기화
 
-        compressed += (str(count) + splited[-1])
-        if count > 1 else splited[-1]
-            s_len_arr.append(len(compressed))
+        compressed += (str(count) + splited[-1]) if count > 1 else splited[-1]
+        s_len_arr.append(len(compressed))
 
     return min(s_len_arr)  # 최솟값 리턴
 
-solution("aabbccab")
+print(solution("aabbccab"))
